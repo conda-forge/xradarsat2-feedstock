@@ -1,5 +1,5 @@
-{% set name = "xradarSat2" %}
-{% set version = "1.0.17" %}
+{% set name = "xradarsat2" %}
+{% set version = "1.0.23" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xradarsat2-{{ version }}.tar.gz
-  sha256: f0531c099bbfc4659f43031a194455ea803d31f22c5a05b8dcd629408e61299f
+  sha256: 4978f602e9bdbad3e7a0654837704acbc9136bd38c686f004d2ada4610feae58
 
 build:
   noarch: python
@@ -42,7 +42,7 @@ test:
     - pip
 
 about:
-  home: https://pypi.org/project/xradarSat2/
+  home: https://pypi.org/project/xradarsat2/
   summary: xarray/dask distributed L1 sar file reader for radarSat2
   license: MIT
   license_file: LICENSE.md
