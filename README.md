@@ -1,11 +1,11 @@
-About xradarsat2
-================
-
-Home: https://pypi.org/project/xradarSat2/
-
-Package license: MIT
+About xradarsat2-feedstock
+==========================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xradarsat2-feedstock/blob/main/LICENSE.txt)
+
+Home: https://pypi.org/project/xradarsat2/
+
+Package license: MIT
 
 Summary: xarray/dask distributed L1 sar file reader for radarSat2
 
