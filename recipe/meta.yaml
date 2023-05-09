@@ -1,5 +1,5 @@
 {% set name = "xradarsat2" %}
-{% set version = "1.0.24" %}
+{% set version = "2023.5.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xradarsat2-{{ version }}.tar.gz
-  sha256: 1512c9947790fbf80c195e421bf9af66b1f50544ad3022842adce7ab3dd9398c
+  sha256: ee13a2266de57eaa72682b0da8267aa966ad6347a114604e49abbdde259fc28e
 
 build:
   noarch: python
