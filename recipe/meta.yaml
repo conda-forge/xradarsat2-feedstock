@@ -1,5 +1,5 @@
 {% set name = "xradarsat2" %}
-{% set version = "2023.6.13" %}
+{% set version = "2024.11.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xradarsat2-{{ version }}.tar.gz
-  sha256: a7c8831fc6a2f6343aec60656ce55a097839afe4abc79b82eb4d8f615d573af6
+  sha256: eac40faf88afed74eddc7512a51401c87d2515937f0ed94c1891a21fc90a4260
 
 build:
   noarch: python
@@ -16,16 +16,15 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python >=3.10
     - pip
     - setuptools >=61.0
     - setuptools_scm >=6.2
   run:
-    - python >=3.9
+    - python >=3.10
     - xmltodict
     - numpy
     - xarray
-    - xarray-datatree
     - rasterio
     - rioxarray
     - dask-core
