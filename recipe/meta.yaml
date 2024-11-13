@@ -19,7 +19,7 @@ requirements:
     - python >=3.9
     - pip
     - setuptools >=64.0
-    - setuptools_scm
+    - setuptools-scm
   run:
     - python >=3.9
     - xmltodict
