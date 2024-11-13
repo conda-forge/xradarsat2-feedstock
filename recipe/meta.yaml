@@ -18,8 +18,8 @@ requirements:
   host:
     - python >=3.9
     - pip
-    - setuptools >=61.0
-    - setuptools_scm >=6.2
+    - setuptools >=64.0
+    - setuptools_scm
   run:
     - python >=3.9
     - xmltodict
@@ -41,8 +41,8 @@ test:
     - pip
 
 about:
-  home: https://pypi.org/project/xradarsat2/
-  summary: xarray/dask distributed L1 sar file reader for radarSat2
+  home: https://github.com/umr-lops/xradarsat2/
+  summary: xarray reader for Level-1 SAR radarSat2 products
   license: MIT
   license_file: LICENSE.md
   dev_url: https://github.com/umr-lops/xradarsat2/
