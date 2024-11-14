@@ -1,13 +1,14 @@
 {% set name = "xradarsat2" %}
-{% set version = "2023.6.13" %}
+{% set version = "2024.11.12" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xradarsat2-{{ version }}.tar.gz
-  sha256: a7c8831fc6a2f6343aec60656ce55a097839afe4abc79b82eb4d8f615d573af6
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xradarsat2-{{ version }}.tar.gz
+  sha256: eac40faf88afed74eddc7512a51401c87d2515937f0ed94c1891a21fc90a4260
 
 build:
   noarch: python
@@ -16,16 +17,15 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
+    - setuptools >=64.0
+    - setuptools-scm >=7
     - pip
-    - setuptools >=61.0
-    - setuptools_scm >=6.2
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - xmltodict
     - numpy
     - xarray
-    - xarray-datatree
     - rasterio
     - rioxarray
     - dask-core
@@ -39,11 +39,12 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
-  home: https://pypi.org/project/xradarsat2/
-  summary: xarray/dask distributed L1 sar file reader for radarSat2
+  home: https://github.com/umr-lops/xradarsat2/
+  summary: xarray reader for Level-1 SAR radarSat2 products
   license: MIT
   license_file: LICENSE.md
   dev_url: https://github.com/umr-lops/xradarsat2/
