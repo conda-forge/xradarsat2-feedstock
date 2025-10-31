@@ -27,7 +27,7 @@ requirements:
     - numpy
     - xarray
     - rasterio
-    - rioxarray >=0.20.0
+    - rioxarray >=0.17.0
     - dask-core
     - affine
     - regex
