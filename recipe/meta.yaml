@@ -32,6 +32,7 @@ requirements:
     - affine
     - regex
     - pyyaml
+    - aiohttp
 
 test:
   imports:
