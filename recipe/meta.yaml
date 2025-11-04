@@ -1,5 +1,5 @@
 {% set name = "xradarsat2" %}
-{% set version = "2024.11.12" %}
+{% set version = "2025.10.15" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xradarsat2-{{ version }}.tar.gz
-  sha256: eac40faf88afed74eddc7512a51401c87d2515937f0ed94c1891a21fc90a4260
+  sha256: d7119a4d5697b984dacf41f9424dc0ac2b5dcc79700c75cfb8673562378e0456
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -27,11 +27,12 @@ requirements:
     - numpy
     - xarray
     - rasterio
-    - rioxarray
+    - rioxarray >=0.17.0
     - dask-core
     - affine
     - regex
     - pyyaml
+    - aiohttp
 
 test:
   imports:
